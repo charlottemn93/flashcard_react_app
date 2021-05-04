@@ -20,10 +20,10 @@ export type UserAccount = {
 function initialState(): State {
   return {
     formData: {
-      firstName: '',
-      lastName: '',
-      emailAddress: '',
-      password: '',
+      firstName: "",
+      lastName: "",
+      emailAddress: "",
+      password: "",
     },
   };
 }

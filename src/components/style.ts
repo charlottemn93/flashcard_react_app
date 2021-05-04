@@ -35,4 +35,6 @@ export const inputStyle = {
 
 export const errorMessageStyle = {
   color: "	#ff0000",
+  font: "400 13.3333px Arial",
+  fontWeight: 400,
 };

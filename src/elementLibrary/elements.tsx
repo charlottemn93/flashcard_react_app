@@ -5,7 +5,7 @@ interface TextInputProps {
   placeHolder: string;
   required: boolean;
   maxLength: number;
-  onChange: ((event: React.ChangeEvent<HTMLInputElement>) => void);
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const TextInput: React.FC<TextInputProps> = ({
@@ -17,7 +17,7 @@ export const TextInput: React.FC<TextInputProps> = ({
   return (
     <div>
       <input
-        style={ inputStyle }
+        style={inputStyle}
         type="text"
         placeholder={placeHolder}
         required={required}
@@ -36,26 +36,28 @@ interface PasswordInputProps {
     value: number;
     message: string;
   };
-  onChange: ((event: React.ChangeEvent<HTMLInputElement>) => void);
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  validationError: string;
 }
 
-// TODO: Add Validation - mind length etc.
 export const PasswordInput: React.FC<PasswordInputProps> = ({
   placeHolder,
   required,
   onChange,
+  validationError,
 }) => {
   return (
     <div>
       <input
-        style={ inputStyle }
+        style={inputStyle}
         placeholder={placeHolder}
         id={placeHolder}
         required={required}
         onChange={onChange}
         type="password"
       />
+      <p style={errorMessageStyle}>{validationError}</p>
       <p></p>
     </div>
   );
-}
+};
