@@ -1,11 +1,9 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack").container
-  .ModuleFederationPlugin;
 const path = require("path");
 
 module.exports = {
   entry: {
-    flashcardApp: "./src/main.tsx",
+    flashcardApp: "./src/Main.tsx",
   },
   mode: "development",
   devServer: {

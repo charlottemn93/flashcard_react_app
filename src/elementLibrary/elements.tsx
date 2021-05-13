@@ -1,5 +1,7 @@
 import React from "react";
-import { inputStyle, errorMessageStyle } from "../components/style";
+import { inputStyle, errorMessageStyle } from "../components/Style";
+
+// add onBlur to all of these and add that accessibility linter
 
 interface TextInputProps {
   placeHolder: string;
@@ -23,6 +25,7 @@ export const TextInput: React.FC<TextInputProps> = ({
         required={required}
         maxLength={maxLength}
         onChange={onChange}
+        onBlur={onChange}
       />
       <p></p>
     </div>
@@ -54,6 +57,7 @@ export const PasswordInput: React.FC<PasswordInputProps> = ({
         id={placeHolder}
         required={required}
         onChange={onChange}
+        onBlur={onChange}
         type="password"
       />
       <p style={errorMessageStyle}>{validationError}</p>
